@@ -1,0 +1,17 @@
+{
+  "name": "pi-memory",
+  "description": "Personal memory and work-journal system for AI agents. Semantic search over your knowledge, decisions, and work history. Agent-agnostic: works via CLI (bash) or MCP server.",
+  "version": "0.1.0",
+  "author": { "name": "Gaurav Sharma", "url": "https://github.com/GauravSharmaCode" },
+  "repository": "https://github.com/GauravSharmaCode/pi-memory",
+  "license": "MIT",
+  "components": ["skills", "mcpServers"],
+  "requires": {
+    "runtime": "node >= 22",
+    "services": ["ollama (optional, for semantic search)"]
+  },
+  "install": {
+    "npm": "npm install -g pi-memory",
+    "local": "cd pi-memory && npm install && npm run build && npm link"
+  }
+}

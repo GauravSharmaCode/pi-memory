@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "pi-memory": {
+      "command": "node",
+      "args": [
+        "/path/to/pi-memory/dist/mcp-server.js"
+      ],
+      "env": {
+        "MEMORY_WORKSPACE": "~/.memory",
+        "OLLAMA_URL": "http://localhost:11434",
+        "EMBEDDING_MODEL": "granite-embedding"
+      }
+    }
+  }
+}

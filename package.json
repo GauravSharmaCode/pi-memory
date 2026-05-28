@@ -1,0 +1,43 @@
+{
+  "name": "pi-memory",
+  "version": "0.1.0",
+  "description": "Personal memory and work-journal system for AI agents. Agent-agnostic. CLI + MCP transports. Local embeddings via Ollama.",
+  "type": "module",
+  "bin": {
+    "pi-memory": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "mcp": "tsx src/mcp-server.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "ai",
+    "memory",
+    "mcp",
+    "agent",
+    "journal",
+    "rag",
+    "ollama"
+  ],
+  "author": "Gaurav Sharma",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GauravSharmaCode/pi-memory"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "chokidar": "^4.0.3",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
