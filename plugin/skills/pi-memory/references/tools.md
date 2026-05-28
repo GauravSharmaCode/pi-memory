@@ -53,7 +53,7 @@ Output:
 
 ```
 Input:
-  type        string   (required) 'ticket' | 'decision' | 'learning' | 'note'
+  type        string   (required) Entry type — e.g. ticket, decision, learning, note, incident, pr, meeting, or any custom label
   summary     string   (required) Short description
   ticketId    string   Ticket/issue ID (e.g. TKT-4521)
   resolution  string   How it was resolved

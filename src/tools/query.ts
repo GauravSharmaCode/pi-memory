@@ -65,12 +65,11 @@ function handleTicketCount(question: string): QueryToolOutput {
   `).all(from) as { type: string; count: number }[];
 
   const total   = rows.reduce((s, r) => s + r.count, 0);
-  const tickets = rows.find((r) => r.type === 'ticket')?.count ?? 0;
 
   const breakdown = rows.map((r) => `  • ${r.type}: ${r.count}`).join('\n');
   const answer = total === 0
     ? `No work logged for ${label}.`
-    : `**${total} entries** logged for ${label}:\n${breakdown}\n\nTickets resolved: **${tickets}**`;
+    : `**${total} entries** logged for ${label}:\n${breakdown}`;
 
   return { question, queryType: 'ticket_count', answer, data: rows };
 }
@@ -120,7 +119,6 @@ async function handleRecurringCheck(question: string): Promise<QueryToolOutput> 
   }>(`
     SELECT ts, ticket_id, summary, resolution
     FROM   worklog
-    WHERE  type = 'ticket'
     ORDER  BY ts DESC
     LIMIT  100
   `);
