@@ -10,7 +10,8 @@
     "build": "tsc",
     "dev": "tsx src/cli.ts",
     "mcp": "tsx src/mcp-server.ts",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "test": "npx tsx --test src/**/*.test.ts"
   },
   "keywords": [
     "ai",
