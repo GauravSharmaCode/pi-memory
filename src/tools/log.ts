@@ -6,7 +6,7 @@ import { getDb, dbTransaction } from '../core/db.js';
 import { embed, serializeEmbedding } from '../core/embeddings.js';
 import { indexFile } from '../core/indexer.js';
 
-export type WorklogType = 'ticket' | 'decision' | 'learning' | 'note';
+export type WorklogType = string; // e.g. 'ticket' | 'decision' | 'learning' | 'note' | anything
 
 export interface LogToolInput {
   type:        WorklogType;

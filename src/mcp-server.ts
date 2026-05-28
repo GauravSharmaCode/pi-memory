@@ -70,7 +70,7 @@ const tools = [
     inputSchema: {
       type: 'object',
       properties: {
-        type:       { type: 'string', enum: ['ticket', 'decision', 'learning', 'note'], description: 'Entry type' },
+        type:       { type: 'string', description: 'Entry type — e.g. ticket, decision, learning, note, incident, pr, meeting, or any custom label' },
         summary:    { type: 'string', description: 'Short description of what happened' },
         ticketId:   { type: 'string', description: 'Ticket/issue ID (e.g. TKT-4521)' },
         resolution: { type: 'string', description: 'How it was resolved' },

@@ -137,7 +137,7 @@ async function main(): Promise<void> {
     case 'log': {
       const type = (positional(1) as WorklogType) ?? 'note';
       const summary    = opt('summary') ?? rest(2);
-      if (!summary) err('Usage: pi-memory log <ticket|decision|learning|note> --summary "..."');
+      if (!summary) err('Usage: pi-memory log <type> --summary "..."  (type: ticket, decision, learning, note, or any label)');
       const ticketId   = opt('id');
       const resolution = opt('resolution');
       const context    = opt('context');
@@ -213,7 +213,7 @@ COMMANDS:
   list [subdir]                     List memory files
   write <text>                      Append to today's daily log
     --file <path>                   Write to specific file
-  log <ticket|decision|learning|note>
+  log <type>                                  (ticket, decision, learning, note, or custom)
     --summary "..."                 (required)
     --id TKT-123                    Ticket ID (for tickets)
     --resolution "..."
